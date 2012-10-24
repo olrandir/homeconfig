@@ -107,3 +107,5 @@ PATH=$PATH:~/tools/:~/tools/drush/
 export PYTHONPATH=$PYTHONPATH:/home/dimis/projects/thebid/thebid/src/thebid/thebid/
 alias android-connect="mtpfs -o allow_other /media/GalaxyNexus"
 alias android-disconnect="fusermount -u /media/GalaxyNexus"
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
