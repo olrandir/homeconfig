@@ -103,9 +103,14 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 PATH=$PATH:~/tools/:~/tools/drush/
+ASANA_KEY="jPiFLCs.4JMyKgNp5n7rM2ir24e0us4T"
 
 export PYTHONPATH=$PYTHONPATH:/home/dimis/projects/thebid/thebid/src/thebid/thebid/
 alias android-connect="mtpfs -o allow_other /media/GalaxyNexus"
 alias android-disconnect="fusermount -u /media/GalaxyNexus"
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
