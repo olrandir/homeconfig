@@ -1,0 +1,47 @@
+Based on code from http://sursolid.com/managing-home-dotfiles-with-git-and-github
+
+Copied text:
+First Time Setup:
+oneline command:
+cd ~;mkdir .homeconfig.git;echo "alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'" >> .bash_aliases;source .bashrc;homeconfig init;homeconfig add .bashrc .bash_aliases;homeconfig commit -m 'Initial commit';homeconfig remote add origin git@github.com:olrandir/homeconfig.git;homeconfig push origin master
+
+$ cd ~
+
+$ mkdir .homeconfig.git
+
+$ echo "alias homeconfig='git --git-dir=$HOME/.homeconfig.git/ --work-tree=$HOME'" >> .bash_aliases
+
+$ source .bashrc
+
+$ homeconfig init
+
+$ homeconfig add .bashrc .bash_aliases
+
+$ homeconfig commit -m 'Initial commit'
+
+$ homeconfig remote add origin git@github.com:olrandir/homeconfig.git
+
+$ homeconfig push origin master
+
+Setup configuration on second machine:
+oneline command:
+cd ~;mv .bashrc .bashrc.bak;mv .bash_aliases .bash_aliases.bak;git clone git@github.com:olrandir/homeconfig.git homeconfig.git;mv homeconfig.git/.git .homeconfig.git;shopt -s dotglob;mv -i homeconfig.git/* .;rmdir homeconfig.git;source .bashrc
+
+$ cd ~
+
+$ mv .bashrc .bashrc.bak
+
+$ mv .bash_aliases .bash_aliases.bak
+
+$ git clone git@github.com:olrandir/homeconfig.git homeconfig.git
+
+$ mv homeconfig.git/.git .homeconfig.git
+
+$ shopt -s dotglob
+
+$ mv -i homeconfig.git/* .
+
+$ rmdir homeconfig.git
+
+$ source .bashrc
+
