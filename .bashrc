@@ -109,7 +109,7 @@ export PYTHONPATH=$PYTHONPATH:/home/dimis/projects/thebid/thebid/src/thebid/theb
 alias android-connect="mtpfs -o allow_other /media/GalaxyNexus"
 alias android-disconnect="fusermount -u /media/GalaxyNexus"
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
